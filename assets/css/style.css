@@ -556,7 +556,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-bottom: 1px solid var(--cultured);
 }
 
-.menu-social-container {
+.menu-social-container { 
   display: flex;
   justify-content: center;
   align-items: center;

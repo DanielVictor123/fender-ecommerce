@@ -1,6 +1,7 @@
 "use strict";
 
-// Fetch a random image from Unsplash
+//JOsiah I'll Comment for you to read and understand easily. Maybe you can get the problem from there 
+// I'll first fetch a random image from Unsplash
 async function fetchRandomImage() {
   const response = await fetch(
     "https://api.unsplash.com/photos/random?query=fashion&client_id=4X7ioGCbS9HV4Tv3kE-w9xYzdMS4BHiiTjaN2wrr7AI"
@@ -22,12 +23,12 @@ function showSparkles() {
   // Add animation or styling to sparkles
   setTimeout(() => {
     document.body.removeChild(sparkles);
-  }, 2000); // Remove sparkles after 2 seconds
+  }, 2000);
 }
 
 // Modal event listeners
 document.addEventListener("DOMContentLoaded", () => {
-  fetchRandomImage(); // Fetch image on page load
+  fetchRandomImage(); // Tis is for fetching the image on page load
 
   const modal = document.querySelector("[data-modal]");
   const modalCloseBtn = document.querySelector("[data-modal-close]");
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   newsletterForm.addEventListener("submit", async (e) => {
     e.preventDefault(); // Prevent default form submission
 
-    const email = newsletterForm.email.value; // Get the email input value
+    const email = newsletterForm.email.value; // This is to get the email input value
 
     // Send email notification to the server
     try {
@@ -51,14 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email }), // Send the email in the request body
+        body: JSON.stringify({ email }), // This is for me to Send the email in the request body
       });
 
       if (response.ok) {
-        showSparkles(); // Show sparkles
-        showSuccessModal(); // Show success modal
-        modal.classList.add("closed"); // Hide the newsletter modal
-        newsletterForm.reset(); // Reset the form
+        showSparkles(); 
+        showSuccessModal(); // Now this is to show success modal
+        modal.classList.add("closed"); // I'll hide the newsletter modal
+        newsletterForm.reset(); // Next I'll reset the form
       } else {
         console.error("Failed to send email");
       }
